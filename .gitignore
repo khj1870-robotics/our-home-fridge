@@ -1,0 +1,20 @@
+# 운영체제·편집기
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# 의존성·빌드 결과
+node_modules/
+dist/
+build/
+__pycache__/
+*.pyc
+
+# 비밀 정보 (API 키 등은 절대 올리지 않음)
+.env
+.env.*
+*.key
+
+# 실제 생활 데이터 (영수증·식단·이름). 예시 데이터는 data/sample/ 에 둠
+data/private/
