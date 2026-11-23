@@ -74,7 +74,12 @@ def summary(rows):
     cnt = {s: sum(r["상태"] == s for r in rows) for s in ("완료", "진행 중", "예정")}
     pct = [float(r["진행률"].rstrip("%")) / 100 for r in rows if r.get("진행률", "").rstrip("%").replace(".", "").isdigit()]
     avg = round(sum(pct) / len(pct) * 100) if pct else 0
-    return (f"전체 진행률 **{avg}%** · 완료 {cnt['완료']} · 진행 중 {cnt['진행 중']} · 예정 {cnt['예정']} "
+    color = "brightgreen" if avg >= 80 else ("blue" if avg >= 40 else "orange")
+    badges = (f"![진행률](https://img.shields.io/badge/progress-{avg}%25-{color}) "
+              f"![완료](https://img.shields.io/badge/done-{cnt['완료']}-4CAF7D) "
+              f"![진행 중](https://img.shields.io/badge/doing-{cnt['진행 중']}-3B7DDD) "
+              f"![예정](https://img.shields.io/badge/todo-{cnt['예정']}-B7CDEB)")
+    return (f"{badges}\n\n전체 진행률 **{avg}%** · 완료 {cnt['완료']} · 진행 중 {cnt['진행 중']} · 예정 {cnt['예정']} "
             f"(작업 {n}개) · 자세한 일정: [구글 시트]({SHEET_URL})")
 
 
