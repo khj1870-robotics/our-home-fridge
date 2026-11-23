@@ -41,6 +41,8 @@ def load_rows(src=None):
     out = []
     for r in rows[head + 1:]:
         d = dict(zip(cols, (c.strip() for c in r)))
+        if "제출 필수" in cols:
+            d.setdefault("제출 필수", "")
         if d.get("구분") and d.get("작업") and re.match(r"\d{4}-\d{2}-\d{2}", d.get("시작일", "")):
             out.append(d)
     return out
@@ -83,9 +85,32 @@ def summary(rows):
             f"(작업 {n}개) · 자세한 일정: [구글 시트]({SHEET_URL})")
 
 
+
+def submission_summary(rows):
+    # 시트에 표시 열을 추가하기 전에도 기존 일정의 제출 작업을 집계한다.
+    if any("제출 필수" in row for row in rows):
+        selected = [row for row in rows if row["제출 필수"] == "필수"]
+    else:
+        tasks = {
+            "독립 실행 버전",
+            "돈 계산 개편 6단계",
+            "테스트·버그 수정",
+            "범위 확정·저장소 만들기",
+            "README 작성",
+            "실행 확인·제출",
+        }
+        selected = [row for row in rows if row["작업"] in tasks]
+    if not selected:
+        return "제출 진행률 · 필수 작업 미지정"
+    total = sum(float(row.get("진행률", "").rstrip("%") or 0) for row in selected)
+    done = sum(row["상태"] == "완료" for row in selected)
+    return (f"제출 진행률 **{total / len(selected):.0f}%** · "
+            f"필수 작업 {len(selected)}개 중 완료 {done}개")
+
+
 def main():
     rows = load_rows(sys.argv[1] if len(sys.argv) > 1 else None)
-    block = f"{START}\n{summary(rows)}\n\n{mermaid(rows)}\n{END}"
+    block = f"{START}\n{summary(rows)}\n\n{submission_summary(rows)}\n\n{mermaid(rows)}\n{END}"
     text = README.read_text(encoding="utf-8") if README.exists() else f"# 우리집 냉장고\n\n## 개발 일정\n\n{START}\n{END}\n"
     if START not in text:
         text += f"\n## 개발 일정\n\n{START}\n{END}\n"
