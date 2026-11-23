@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="240" viewBox="0 0 960 240" role="img" aria-label="우리집 냉장고 - 냉장고 관리부터 끼니 해결까지">
+  <rect width="960" height="240" rx="24" fill="#FFF3B8"/>
+  <!-- 냉장고 -->
+  <g transform="translate(96 36)" fill="none" stroke="#5B4636" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="0" y="0" width="112" height="168" rx="18" fill="#FFFFFF"/>
+    <line x1="0" y1="62" x2="112" y2="62"/>
+    <line x1="92" y1="22" x2="92" y2="44"/>
+    <line x1="92" y1="82" x2="92" y2="118"/>
+    <circle cx="34" cy="104" r="10" fill="#F6C344"/>
+    <rect x="22" y="128" width="40" height="18" rx="6" fill="#9CCB86"/>
+  </g>
+  <!-- 제목 -->
+  <text x="264" y="112" font-family="'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="52" font-weight="800" fill="#3E3027">우리집 냉장고</text>
+  <text x="266" y="156" font-family="'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="22" fill="#5B4636">냉장고 관리부터 끼니 해결까지, 더 간편하게</text>
+  <text x="266" y="190" font-family="'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif" font-size="16" fill="#8A7560">재고 · 식단표 · 지난 식단 · 가계부</text>
+</svg>
