@@ -129,11 +129,11 @@
 일정은 [구글 시트](https://docs.google.com/spreadsheets/d/1r8RBJvEdbfDC4w6hNwSiXqFveHQJivf6P9-myf62BhA)에서 관리하고, 매일 GitHub Actions가 아래 배지와 차트를 자동으로 갱신합니다 ([`scripts/sync_schedule.py`](scripts/sync_schedule.py)).
 
 <!-- schedule:start -->
-![진행률](https://img.shields.io/badge/progress-46%25-blue) ![완료](https://img.shields.io/badge/done-13-4CAF7D) ![진행 중](https://img.shields.io/badge/doing-5-3B7DDD) ![예정](https://img.shields.io/badge/todo-14-B7CDEB)
+![진행률](https://img.shields.io/badge/progress-48%25-blue) ![완료](https://img.shields.io/badge/done-14-4CAF7D) ![진행 중](https://img.shields.io/badge/doing-5-3B7DDD) ![예정](https://img.shields.io/badge/todo-14-B7CDEB)
 
-전체 진행률 **46%** · 완료 13 · 진행 중 5 · 예정 14 (작업 32개) · 자세한 일정: [구글 시트](https://docs.google.com/spreadsheets/d/1r8RBJvEdbfDC4w6hNwSiXqFveHQJivf6P9-myf62BhA)
+전체 진행률 **48%** · 완료 14 · 진행 중 5 · 예정 14 (작업 33개) · 자세한 일정: [구글 시트](https://docs.google.com/spreadsheets/d/1r8RBJvEdbfDC4w6hNwSiXqFveHQJivf6P9-myf62BhA)
 
-제출 진행률 **28%** · 필수 작업 6개 중 완료 0개
+제출 진행률 **31%** · 필수 작업 6개 중 완료 0개
 
 ```mermaid
 gantt
@@ -148,6 +148,7 @@ gantt
     식단표 화면 개선 :done, 2026-10-12, 2d
     화면 시안 :done, 2026-10-22, 1d
     재디자인 ver2 :done, 2026-10-24, 3d
+    README 배너 :done, 2026-11-24, 2d
     새 디자인으로 다시 만들기 :2026-12-07, 25d
     section 개발
     첫 웹앱 :done, 2026-10-11, 2d
@@ -155,8 +156,8 @@ gantt
     등분·정산 :done, 2026-10-19, 4d
     식단표 기능 :done, 2026-10-23, 1d
     돈 계산 개편 0~5단계 :done, 2026-10-26, 2d
-    독립 실행 버전 :active, 2026-11-25, 4d
-    돈 계산 개편 6단계 :active, 2026-11-29, 3d
+    독립 실행 버전 :active, 2026-11-24, 4d
+    돈 계산 개편 6단계 :active, 2026-11-28, 2d
     돈 계산 개편 7단계 :2026-12-07, 14d
     웹앱을 앱으로 포장 :2027-01-01, 31d
     로그인·클라우드 저장 :2027-01-01, 31d
@@ -164,12 +165,12 @@ gantt
     section 테스트
     카메라 첨부 버그 수정 :done, 2026-10-25, 1d
     실사용· 연비 기록 :done, 2026-10-31, 1d
-    테스트·버그 수정 :active, 2026-12-02, 2d
+    테스트·버그 수정 :active, 2026-11-30, 3d
     두 사람 실사용 점검 :2026-12-21, 11d
     section 제출
     범위 확정·저장소 만들기 :active, 2026-11-23, 2d
-    README 작성 :active, 2026-12-04, 1d
-    실행 확인·제출 :2026-12-05, 1d
+    README 작성 :active, 2026-11-23, 11d
+    실행 확인·제출 :2026-12-04, 2d
     과제 마감 :2026-12-06, 1d
     section 출시
     테스터 모집 :2027-01-15, 17d
