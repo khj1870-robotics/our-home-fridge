@@ -38,7 +38,7 @@
 🛒 <b>장보기</b>
 &nbsp;➡️&nbsp; 🥬 <b>영수증 자동 입력</b>
 &nbsp;➡️&nbsp; 📝 <b>식단 계획</b>
-&nbsp;➡️&nbsp; 🍽️ <b>먹음 처리</b>
+&nbsp;➡️&nbsp; 🍽️ <b>식사</b>
 &nbsp;➡️&nbsp; 💰 <b>재고·식비 반영</b>
 &nbsp;➡️&nbsp; 🛒 <b>다음 장보기</b>
 </p>
@@ -49,7 +49,7 @@
 
 | 🙋 사람 | 🤖 비서 |
 | --- | --- |
-| 🛒 장 보고, 📷 영수증을 찍는다 | 🤖 품목과 가격을 읽어 냉장고 재고와 가계부를 채운다 |
+| 🛒 마트에서 장을 보고, 📷 영수증을 찍는다 | 🤖 품목·수량·금액을 읽어 초안을 만들고, 사람은 틀린 것만 고친다. 확정하면 냉장고 재고와 가계부가 채워진다 |
 | 🍳 남은 재료 보고 메뉴를 정한다 | ⚙️ 그 재료에 '먹을 예정' 표시를 붙인다 |
 | 👩‍🍳 요리해서 맛있게 먹는다 | 😊 맛있게 드세요! |
 | ✅ 먹었으면 체크한다 | ⚙️ 재고를 빼고, 1인 단가를 계산하고, 지난 식단에 남긴다 |
@@ -129,11 +129,11 @@
 일정은 [구글 시트](https://docs.google.com/spreadsheets/d/1r8RBJvEdbfDC4w6hNwSiXqFveHQJivf6P9-myf62BhA)에서 관리하고, 매일 GitHub Actions가 아래 배지와 차트를 자동으로 갱신합니다 ([`scripts/sync_schedule.py`](scripts/sync_schedule.py)).
 
 <!-- schedule:start -->
-![진행률](https://img.shields.io/badge/progress-46%25-blue) ![완료](https://img.shields.io/badge/done-13-4CAF7D) ![진행 중](https://img.shields.io/badge/doing-5-3B7DDD) ![예정](https://img.shields.io/badge/todo-14-B7CDEB)
+![진행률](https://img.shields.io/badge/progress-48%25-blue) ![완료](https://img.shields.io/badge/done-14-4CAF7D) ![진행 중](https://img.shields.io/badge/doing-5-3B7DDD) ![예정](https://img.shields.io/badge/todo-14-B7CDEB)
 
-전체 진행률 **46%** · 완료 13 · 진행 중 5 · 예정 14 (작업 32개) · 자세한 일정: [구글 시트](https://docs.google.com/spreadsheets/d/1r8RBJvEdbfDC4w6hNwSiXqFveHQJivf6P9-myf62BhA)
+전체 진행률 **48%** · 완료 14 · 진행 중 5 · 예정 14 (작업 33개) · 자세한 일정: [구글 시트](https://docs.google.com/spreadsheets/d/1r8RBJvEdbfDC4w6hNwSiXqFveHQJivf6P9-myf62BhA)
 
-제출 진행률 **28%** · 필수 작업 6개 중 완료 0개
+제출 진행률 **31%** · 필수 작업 6개 중 완료 0개
 
 ```mermaid
 gantt
@@ -148,6 +148,7 @@ gantt
     식단표 화면 개선 :done, 2026-10-12, 2d
     화면 시안 :done, 2026-10-22, 1d
     재디자인 ver2 :done, 2026-10-24, 3d
+    README 배너 :done, 2026-11-24, 2d
     새 디자인으로 다시 만들기 :2026-12-07, 25d
     section 개발
     첫 웹앱 :done, 2026-10-11, 2d
@@ -168,7 +169,7 @@ gantt
     두 사람 실사용 점검 :2026-12-21, 11d
     section 제출
     범위 확정·저장소 만들기 :active, 2026-11-23, 2d
-    README 작성 :active, 2026-12-04, 1d
+    README 작성 :active, 2026-11-23, 12d
     실행 확인·제출 :2026-12-05, 1d
     과제 마감 :2026-12-06, 1d
     section 출시
